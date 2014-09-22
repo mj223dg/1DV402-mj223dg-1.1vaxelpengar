@@ -1,0 +1,14 @@
+c:\users\mj223dg\documents\visual studio 2010\Projects\smallChange\smallChange\bin\Debug\smallChange.exe
+c:\users\mj223dg\documents\visual studio 2010\Projects\smallChange\smallChange\bin\Debug\smallChange.pdb
+c:\users\mj223dg\documents\visual studio 2010\Projects\smallChange\smallChange\obj\x86\Debug\smallChange.exe
+c:\users\mj223dg\documents\visual studio 2010\Projects\smallChange\smallChange\obj\x86\Debug\smallChange.pdb
+P:\Övningsuppgifterna\smallChange\smallChange\obj\x86\Debug\smallChange.exe
+P:\Övningsuppgifterna\smallChange\smallChange\obj\x86\Debug\smallChange.pdb
+P:\Övningsuppgifterna\smallChange\smallChange\bin\Debug\smallChange.exe
+P:\Övningsuppgifterna\smallChange\smallChange\bin\Debug\smallChange.pdb
+P:\Övningsuppgifterna\smallChange\smallChange\obj\x86\Debug\smallChange.csprojResolveAssemblyReference.cache
+P:\cfg\github\1DV402-mj223dg-1.1vaxelpengar\smallChange\smallChange\obj\x86\Debug\smallChange.exe
+P:\cfg\github\1DV402-mj223dg-1.1vaxelpengar\smallChange\smallChange\obj\x86\Debug\smallChange.pdb
+P:\cfg\github\1DV402-mj223dg-1.1vaxelpengar\smallChange\smallChange\bin\Debug\smallChange.exe
+P:\cfg\github\1DV402-mj223dg-1.1vaxelpengar\smallChange\smallChange\bin\Debug\smallChange.pdb
+P:\cfg\github\1DV402-mj223dg-1.1vaxelpengar\smallChange\smallChange\obj\x86\Debug\smallChange.csprojResolveAssemblyReference.cache
