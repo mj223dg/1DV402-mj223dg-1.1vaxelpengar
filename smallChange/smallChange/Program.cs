@@ -17,52 +17,59 @@ namespace smallChange
             uint moneyBack = 0; //Money back.
             uint total ; // Subtotal rounded
             uint dividedAmount; //Divide to the diffrent notes and coins.
-            while (true)//If the amount is lower than 0,5 then false and , if amount is higher than 0,49 then break the loop and proceed.
-            try
-            {
-                Console.Write("Enter the total amount:"); //Collect the total sum of the product.
-                subTotal = double.Parse(Console.ReadLine());
-                // If the cost of the product costs less than 0.49 then close the program.
-                if (subTotal < 0.49)
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("The sum is too small!");
-                    Console.ResetColor();
-                    return;
-                }
-                break;
-            }
-            catch
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Error! Wrong amount!");
-                Console.ResetColor();
-            }
-            //Calculate rounding.
-            total = (uint)Math.Round(subTotal);
-            roundingOffAmount = total - subTotal;
-            // If someone pay less than the products cost then close program(false)...if correct continue
+
             while (true)
+            {
                 try
                 {
-                    Console.Write("Enter the amount received:");
-                    totalSum = uint.Parse(Console.ReadLine());
-                        if (totalSum < subTotal)
-                        {
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.Write("The amount is less than the price for the product.");
-                            Console.ResetColor();
-                            return;
-                        }
-                        break;
+                    Console.Write("Enter the total amount:"); //Collect the total sum of the product.
+                    subTotal = double.Parse(Console.ReadLine());
+                    // If the cost of the product costs less than 0.49 then close the program. If over thn continue
+                    if (subTotal < 0.49)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("The sum is too small!");
+                        Console.ResetColor();
+                        return;
+                    }
+                    break;
                 }
                 catch
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Error! Wrong amount!");
                     Console.ResetColor();
-
                 }
+            }
+
+            //Calculate rounding.
+            total = (uint)Math.Round(subTotal);
+            roundingOffAmount = total - subTotal;
+
+            while (true)
+            {
+                try
+                {
+                    Console.Write("Enter the amount received:");
+                    totalSum = uint.Parse(Console.ReadLine());
+                    // If someone pay less than the products cost then close program(false)...if correct continue    
+                    if (totalSum < total)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("The amount is less than the price for the product.");
+                        Console.ResetColor();
+                        return;
+                    }
+                    break;
+                }
+                catch
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Error! Wrong amount!");
+                    Console.ResetColor();
+                }
+            }
+
             //Money back cal...
             moneyBack = totalSum - total;
             //Results
@@ -128,13 +135,12 @@ namespace smallChange
             }
             moneyBack %= 5;
 
-            dividedAmount = moneyBack / 1;
+            dividedAmount = moneyBack;
             if (dividedAmount > 0)
             {
                 Console.WriteLine("1 crown coins\t\t= {0}",
                     dividedAmount);
             }
-            moneyBack %= 1;
         }
     }
 }
