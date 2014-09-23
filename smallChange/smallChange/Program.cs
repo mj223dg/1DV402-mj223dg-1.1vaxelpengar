@@ -12,16 +12,17 @@ namespace smallChange
 
             //Assign variables
             double subTotal = 0; //Amount of the product.
-            uint totalSum = 0; //I pay.
+            uint totalSum = 0; //customer pay.
             double roundingOffAmount; //Rounded.
             uint moneyBack = 0; //Money back.
-            uint total ; // ??
+            uint total ; // Subtotal rounded
             uint dividedAmount; //Divide to the diffrent notes and coins.
             while (true)//If the amount is lower than 0,5 then false and , if amount is higher than 0,49 then break the loop and proceed.
             try
             {
                 Console.Write("Enter the total amount:"); //Collect the total sum of the product.
                 subTotal = double.Parse(Console.ReadLine());
+                // If the cost of the product costs less than 0.49 then close the program.
                 if (subTotal < 0.49)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -40,7 +41,7 @@ namespace smallChange
             //Calculate rounding.
             total = (uint)Math.Round(subTotal);
             roundingOffAmount = total - subTotal;
-            // If someone pay more than the products cost then close program(false)...
+            // If someone pay less than the products cost then close program(false)...if correct continue
             while (true)
                 try
                 {
@@ -65,7 +66,7 @@ namespace smallChange
             //Money back cal...
             moneyBack = totalSum - total;
             //Results
-            Console.Write("\nKVITTO\n");
+            Console.Write(" KVITTO ");
             Console.WriteLine("-----------------------");
             Console.WriteLine("Total        =   {0:c}",
                 subTotal);
